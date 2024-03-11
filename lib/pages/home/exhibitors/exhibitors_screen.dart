@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../utils/screen.dart';
 import 'exhibitors_fragment.dart';
 

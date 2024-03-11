@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../../models/data/exhibitor_data.dart';
 import '../../../widgets/connection_information.dart';
 import '../../../widgets/organization_item.dart';
