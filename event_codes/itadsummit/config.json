@@ -1,0 +1,35 @@
+{
+  "appName": "ITAD SUMMIT 2023",
+  "subdomain": "itadsummit",
+  "ios": {
+    "applicationId": "io.eventmeet.itadsummit2023",
+    "appstoreId": "1628975436",
+    "splash": {
+      "file": "splash_logo.png",
+      "backgroundColor": "2196f3",
+      "size": {
+        "width": 230
+      }
+    },
+    "appIcon": {
+      "file": "app_icon.png",
+      "backgroundColor": "2196f3"
+    },
+    "firebaseConsoleFile": "GoogleService-Info.plist"
+  },
+  "android": {
+    "applicationId": "io.eventmeet.itadsummit2023",
+    "splash": {
+      "file": "splash_logo.png",
+      "backgroundColor": "2196f3",
+      "size": {
+        "width": 230
+      }
+    },
+    "appIcon": {
+      "file": "app_icon.png",
+      "backgroundColor": "2196f3"
+    },
+    "firebaseConsoleFile": "google-services.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/apple-app-site-association.json",
+      "destination": "/.well-known/apple-app-site-association.json"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+git_url("git@github.com:wipeguy82/conferenceapp.git")
+git_branch("certificates")
+storage_mode("git")
+
+# match_password=match123

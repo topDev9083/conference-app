@@ -1,0 +1,35 @@
+{
+  "appName": "Demo",
+  "subdomain": "demo",
+  "ios": {
+    "applicationId": "io.eventmeet.demo",
+    "appstoreId": "6452011721",
+    "splash": {
+      "file": "splash_logo.png",
+      "backgroundColor": "ffffff",
+      "size": {
+        "width": 230
+      }
+    },
+    "appIcon": {
+      "file": "app_icon.png",
+      "backgroundColor": "ffffff"
+    },
+    "firebaseConsoleFile": "GoogleService-Info.plist"
+  },
+  "android": {
+    "applicationId": "io.eventmeet.demo",
+    "splash": {
+      "file": "splash_logo.png",
+      "backgroundColor": "ffffff",
+      "size": {
+        "width": 230
+      }
+    },
+    "appIcon": {
+      "file": "app_icon.png",
+      "backgroundColor": "ffffff"
+    },
+    "firebaseConsoleFile": "google-services.json"
+  }
+}

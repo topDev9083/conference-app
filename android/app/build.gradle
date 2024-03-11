@@ -1,0 +1,107 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+def dartDefines = [
+        DART_ENV: 'production',
+]
+if (project.hasProperty('dart-defines')) {
+    dartDefines = dartDefines + project.property('dart-defines')
+            .split(',')
+            .collectEntries { entry ->
+                def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+                [(pair.first()): pair.last()]
+            }
+}
+def envProperties = new Properties()
+def envPropertiesFile = rootProject.file('../config/' + dartDefines.DART_ENV + '.config')
+if (envPropertiesFile.exists()) {
+    envProperties.load(new FileInputStream(envPropertiesFile))
+} else {
+    throw new GradleException(dartDefines.DART_ENV + '.config file not found in flutter config directory')
+}
+
+def commonProperties = new Properties()
+def commonPropertiesFile = rootProject.file('./common.properties')
+if (commonPropertiesFile.exists()) {
+    commonProperties.load(new FileInputStream(commonPropertiesFile))
+} else {
+    throw new GradleException('common.properties file not found in android folder')
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('keystore.jks')
+            storePassword '4E6vtkPFls'
+            keyPassword '4E6vtkPFls'
+            keyAlias 'eventmeet'
+        }
+    }
+
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId commonProperties['APPLICATION_ID']
+        minSdkVersion 22
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        resValue "string", "app_name", envProperties['APP_NAME']
+        resValue "string", "deep_link", envProperties['DEEP_LINK']
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        profile {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {}

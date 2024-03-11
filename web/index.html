@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="$FLUTTER_BASE_HREF">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link id="apple-touch-icon" rel="apple-touch-icon">
+
+    <!-- Favicon -->
+    <link id="favicon" rel="icon" type="image/png"/>
+    <title></title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        // The value below is injected by flutter build, do not touch.
+        var serviceWorkerVersion = null;
+
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+
+    <style>
+        .progressbar {
+            height: 100%;
+            animation: linear-progress 1.35s linear infinite;
+        }
+
+        @keyframes linear-progress {
+            0% {
+                width: 0;
+                margin-left: 0;
+            }
+            50% {
+                margin-left: 0;
+                width: 80%;
+            }
+            100% {
+                width: 100%;
+                margin-left: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body style="height: 100vh; margin: 0">
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%">
+    <img style="height: 60px;"
+         id='splashImage'>
+    <div style="position: absolute; left: 0; right: 0;top: 0; height: 3px; background-color: white">
+        <div class="progressbar"
+             id="progressbar"></div>
+    </div>
+</div>
+
+<!-- This script loads splash screen from subdomain -->
+<script>
+    try {
+        const event = localStorage.getItem('flutter.event');
+        if (event) {
+            loadSplashFromEvent(JSON.parse(event));
+        }
+    } catch {
+    }
+    const aHost = window.location.hostname.split('.');
+    let subDomain;
+    let apiDomain;
+    let hostDomain;
+    if (aHost.length === 3) {
+        subDomain = aHost[0];
+        hostDomain = aHost[1] + '.' + aHost[2];
+        apiDomain = hostDomain;
+    } else {
+        subDomain = 'google';
+        apiDomain = 'localhost:3000';
+        hostDomain = 'localhost:' + window.location.port;
+    }
+    const scheme = apiDomain.startsWith('localhost') ? 'http' : 'https';
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4) {
+            const response = JSON.parse(this.responseText);
+            if (this.status === 200) {
+                const event = response['data'];
+                localStorage.setItem('flutter.event', JSON.stringify(event));
+                loadSplashFromEvent(event);
+            } else if (this.status === 404) {
+                window.location.replace(scheme + '://error.' + hostDomain + '?reason=' + response['metaData']['key']);
+            }
+        }
+    };
+    xhttp.open('GET', scheme + '://api.' + apiDomain + '/api/v1/events/' + subDomain, true);
+    xhttp.send();
+
+    function loadSplashFromEvent(event) {
+        document.title = event.name;
+        const appConfig = event.appConfig;
+        document.body.style.backgroundColor = '#' + appConfig.splashBackgroundColor;
+        document.getElementById('progressbar').style['background-color'] = '#' + appConfig.primaryColor;
+        if (appConfig.splashLogo) {
+            document.getElementById('splashImage').setAttribute('src', appConfig.splashLogo);
+        }
+        if (appConfig.eventLogo) {
+            document.getElementById('favicon').setAttribute('href', appConfig.eventLogo);
+            document.getElementById('apple-touch-icon').setAttribute('href', appConfig.eventLogo);
+        }
+    }
+
+
+</script>
+
+<!-- This script turn background to black after its loaded -->
+<script>
+    window.addEventListener('flutter-first-frame', function() {
+        setTimeout(function() {
+            document.body.style.backgroundColor = '#000000';
+        }, 2000);
+    });
+
+</script>
+<!-- This script load main.dart.js -->
+<script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      });
+    });
+</script>
+</body>
+</html>

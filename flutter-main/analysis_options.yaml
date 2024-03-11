@@ -1,0 +1,21 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.gr.dart'
+    - '**/*.freezed.dart'
+    - 'lib/generated_plugin_registrant.dart'
+
+linter:
+  rules:
+    constant_identifier_names: false
+    sort_pub_dependencies: false
+    prefer_relative_imports: true
+    unawaited_futures: true
+    avoid_classes_with_only_static_members: false
+    prefer_final_parameters: true
+    use_key_in_widget_constructors: false
+    avoid_renaming_method_parameters: false
+    require_trailing_commas: true
+    library_private_types_in_public_api: false

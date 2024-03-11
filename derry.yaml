@@ -1,0 +1,40 @@
+generate-code:
+  build: dart run build_runner build
+  watch: dart run build_runner watch
+  rebuild: dart run build_runner build --delete-conflicting-outputs
+  delete: find . -maxdepth 20 -type f \( -name "*.inject.summary" -o -name "*.inject.dart" -o  -name "*.g.dart -name "*.gr.dart -name "*.freezed.dart" \) -delete
+
+download-code: |
+  read -p 'Enter event code:' eventCode && \
+  cd node && \
+  npm start $eventCode
+
+clean:
+  (execution): once
+  (scripts):
+    - read -p 'Are you sure you want to delete all ignored directories and files? y/n:' yn
+    - '[[ $yn == "y" ]] && git clean -dfXn'
+
+emulate:
+  web: firebase emulators:start
+
+match:
+  appstore: cd ios && bundle exec fastlane app_match type:appstore
+  development: cd ios && bundle exec fastlane app_match type:development
+
+build:
+  web: |
+    read -p 'Enter Environment (production/stage):' dartEnv &&
+    flutter build web --dart-define=DART_ENV=$dartEnv
+  android: |
+    read -p 'Enter Environment (production/stage):' dartEnv &&
+    cd android &&
+    bundle install &&
+    bundle exec fastlane build dartEnv:$dartEnv &&
+    bundle exec fastlane deploy dartEnv:$dartEnv
+  ios: |
+    read -p 'Enter Environment (production/stage):' dartEnv &&
+    cd ios &&
+    bundle install &&
+    bundle exec fastlane build dartEnv:$dartEnv &&
+    bundle exec fastlane deploy dartEnv:$dartEnv

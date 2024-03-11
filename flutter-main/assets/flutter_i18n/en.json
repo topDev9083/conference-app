@@ -1,0 +1,308 @@
+{
+  "app_name": "Event Meet",
+  "general": {
+    "please_wait": "Please wait ...",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "error": "Error!",
+    "search": "Search ...",
+    "done": "Done",
+    "optional": "Optional!",
+    "readonly": "Readonly!",
+    "update": "Update",
+    "are_you_sure": "Are you sure?",
+    "save": "Save",
+    "next": "Next",
+    "close": "Close",
+    "confirm": "Confirm",
+    "crop": "Crop",
+    "camera": "Camera",
+    "gallery": "Gallery"
+  },
+  "auth": {
+    "email": "Email",
+    "error_email_required": "Email is required",
+    "error_email_invalid": "Invalid email address",
+    "login": {
+      "password": "Password",
+      "error_password_required": "Password is required",
+      "error_password_invalid": "Min 5 characters are required",
+      "login": "Login",
+      "event_sponsored_by": "Event\nSponsored by",
+      "forgot_password": "Forgot Password?",
+      "change_event_code": "Change Event Subdomain",
+      "dont_have_account": "Don't have an account?"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "full_name": "Full Name",
+      "error_full_name_required": "Full name is required",
+      "success_title": "Success!",
+      "success_subtitle": "We have received your request. Administrator will contact you soon.",
+      "already_have_account": "Already have an account?"
+    },
+    "forgot_password": {
+      "title": "Forgot Password",
+      "enter_email": "Enter your registered Email address to rest the password.",
+      "reset_password": "Reset Password",
+      "back_to_login": "Back to Login Screen",
+      "check_mail": "Check your mail",
+      "password_sent": "Your temporary password has been sent to your email address, use it to login.",
+      "return_to": "Return to"
+    }
+  },
+  "home": {
+    "drawer": {
+      "dashboard": "Dashboard",
+      "schedule_meetings": "Schedule Meetings",
+      "meeting_management": "Meeting Management",
+      "sessions": "Sessions",
+      "my_agenda": "My Agenda",
+      "speakers": "Speakers",
+      "exhibitors": "Exhibitors",
+      "sponsors": "Sponsors",
+      "messages": "Messages",
+      "lead_scanner": "Lead Scanner",
+      "organization": "Organization",
+      "feeds": "Feeds",
+      "logout": "Logout"
+    },
+    "toolbar": {
+      "event_sponsored_by": "Event Sponsored By"
+    }
+  },
+  "dashboard": {
+    "attendees": "Attendees",
+    "featured_sessions": "Featured Sessions",
+    "meetings_scheduled": "Meetings Scheduled",
+    "pending_meeting_requests": "Pending Meeting Requests",
+    "speakers": "Speakers",
+    "view_all": "View all",
+    "complete_profile": "Complete your Profile to Connect, and start networking with people",
+    "plus_100": "+ 100",
+    "start_networking": "Start Networking"
+  },
+  "meeting_statuses": {
+    "request_received": "Meeting Request Received",
+    "request_sent": "Meeting Request Sent",
+    "reschedule_received": "Meeting Reschedule Request Received",
+    "reschedule_sent": "Meeting Reschedule Request Sent",
+    "cancelled": "Meeting Cancelled",
+    "rejected": "Meeting Rejected",
+    "accepted": "Meeting Accepted"
+  },
+  "schedule_meetings": {
+    "filter_panel": {
+      "organizations": "Organizations",
+      "countries": "Countries",
+      "meeting_status": "Meeting Status",
+      "pending_requests": "Pending Request",
+      "confirmed_request": "Confirmed Request",
+      "canceled_request": "Canceled Request",
+      "more": "+More",
+      "clear_filters": "Clear Filters",
+      "apply_filters": "Apply Filters",
+      "others": "Others"
+    },
+    "users_panel": {
+      "sort_by": "Sort By: {sortType}",
+      "name": "Name",
+      "job_title": "Job Title",
+      "organization": "Organization",
+      "date_added": "Date Added",
+      "countries": "Countries",
+      "meeting_status": "Meeting Status",
+      "more": "+More",
+      "clear_filters": "Clear Filters"
+    },
+    "user_detail": {
+      "message": "Message",
+      "email": "Email",
+      "phone_number": "Phone Number",
+      "bio": "Bio",
+      "schedule_meeting": "Schedule Meeting",
+      "colleagues": "Colleagues",
+      "book_a_meeting": "Book a meeting",
+      "message_optional": "Message (optional)",
+      "select_time_slots": "Select one or more time slots you would like to schedule the meeting. Once the other person confirms the selected time, you will be placed at an available 1-2-1 meeting table.",
+      "send_meeting_request": "Send Meeting Request",
+      "update_meeting_request": "Update Meeting Request",
+      "update_rescheduled_meeting_request": "Update Rescheduled Meeting Request",
+      "cancel_meeting_request": "Cancel Meeting Request",
+      "reschedule_meeting_request": "Reschedule Meeting",
+      "cancel_meeting": "Cancel Meeting",
+      "ask_to_reschedule": "Ask to Reschedule",
+      "accept": "Accept",
+      "view": "View",
+      "decline": "Decline",
+      "meeting_request_sent_done": "You have successfully sent meeting request",
+      "meeting_request_updated_done": "Your meeting request has been updated successfully",
+      "meeting_request_rescheduled_done": "You have successfully sent asked to reschedule meeting request",
+      "meeting_update_done": "You request to update meeting schedule is sent successfully",
+      "meeting_cancel_done": "You have successfully canceled your meeting",
+      "meeting_reject_done": "You have successfully rejected meeting",
+      "meeting_error": "Meeting Error!",
+      "note": "Note"
+    },
+    "select_user": "Please select attendee to\nschedule meeting with"
+  },
+  "update_user_note": {
+    "title": "Update Note"
+  },
+  "sessions": {
+    "add_to_my_agenda": "Add to my agenda",
+    "remove_from_my_agenda": "Remove from my agenda"
+  },
+  "exhibitors": {
+    "location_value": "Location: {value}",
+    "booth_number_value": "Booth Number: {value}"
+  },
+  "speakers": {
+    "sessions": "Sessions"
+  },
+  "messages": {
+    "chats": "Chats",
+    "contacts": "Contacts",
+    "type_your_message": "Type your Message",
+    "select_user": "Please select attendee to\nstart chatting with",
+    "meeting_request": "Meeting Request"
+  },
+  "my_agenda": {
+    "meeting": "Meeting",
+    "session": "Session",
+    "unavailable": "Unavailable",
+    "no_agenda": "No agenda for this date"
+  },
+  "lead_scanner": {
+    "scanned_leads": "Scanned Leads",
+    "scan_qr_code": "Scan QR Code",
+    "no_leads_found": "No Leads Found",
+    "click_scan": "Please click on scan leads to add new lead",
+    "download_csv": "Download CSV",
+    "share_csv": "Share CSV"
+  },
+  "add_user_occupancy": {
+    "title": "Add Custom Agenda",
+    "date": "Date",
+    "error_date_required": "Date is required",
+    "start_time": "Start time",
+    "error_start_time_required": "Start time is required",
+    "end_time": "End time",
+    "error_end_time_required": "End time is required",
+    "error_end_time_invalid": "End time can't be less than start time",
+    "reason": "Reason (Optional)",
+    "add": "Add"
+  },
+  "meeting_management": {
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "cancelled": "Cancelled",
+    "error_pending_empty_title": "No Meeting Pending!",
+    "error_pending_empty_subtitle": "There is no meeting request to accept",
+    "error_accepted_empty_title": "No Meeting Accepted!",
+    "error_accepted_empty_subtitle": "You have no scheduled meetings",
+    "error_cancelled_empty_title": "No Meeting Cancelled!",
+    "error_cancelled_empty_subtitle": "You have no cancelled meeting"
+  },
+  "page_not_found": {
+    "title": "Page not found",
+    "subtitle": "Uh oh, can’t seem to find the page you’re looking for.",
+    "go_back": "Back to home"
+  },
+  "tabs": {
+    "all_days": "All Days"
+  },
+  "profile": {
+    "profile": "Profile",
+    "fill_profile": "Fill out your profile information to make it easier for people to meet you at the event",
+    "first_name": "First Name",
+    "error_first_name_required": "First Name is required",
+    "last_name": "Last Name",
+    "error_last_name_required": "Last Name is required",
+    "email": "Email",
+    "phone_number": "Phone Number",
+    "job_title": "Job Title",
+    "bio": "Bio",
+    "filters": "Filters",
+    "fill_filters": "Fill out filter information to make it easier for people to search you from filters",
+    "social_media": "Social Media",
+    "fill_social_media": "Fill out your profile information to make it easier for people to meet you at the event",
+    "linkdin_username": "linkdin-username",
+    "twitter-username": "twitter-username",
+    "facebook-username": "facebook-username",
+    "skype-username": "skype-username",
+    "colleagues": "Colleagues",
+    "colleagues_subtitle": "Below is list of all list of all event attendees that works with you."
+  },
+  "change_password": {
+    "title": "Change Password",
+    "subtitle": "It seems like you are logged in using temporary password. Please change your password to keep your account secure",
+    "current_password": "Current Password",
+    "error_current_password_required": "Current Password",
+    "new_password": "New Password",
+    "error_new_password_required": "New Password is required",
+    "confirm_password": "Confirm Password",
+    "error_confirm_password_required": "Confirm Password is required",
+    "error_confirm_password_invalid": "Confirm Password does not match",
+    "change_password": "Change Password"
+  },
+  "edit_organization": {
+    "title": "Edit Organization",
+    "subtitle": "Fill out your organization's information to make it easier for people to know more about you and your colleagues' organization",
+    "name": "Organization Name",
+    "error_name_required": "Organization Name is required",
+    "error_name_conflict": "Organization Name already exist",
+    "phone_number": "Phone Number",
+    "website": "Website",
+    "email": "Email",
+    "error_name_invalid": "Invalid email address",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "zipcode": "Zipcode",
+    "country": "Country",
+    "error_country_dropdown": "Select country from dropdown",
+    "profile": "Profile",
+    "organization_logo": "Organization Logo",
+    "upload": "Upload"
+  },
+  "feeds": {
+    "administrator": "Administrator",
+    "create_feed": "Create Feed",
+    "photo": "Photo",
+    "post": "Post",
+    "create_feed_hint": "What's on your mind?",
+    "like": "Like",
+    "unlike": "Unlike",
+    "comment": "Comment",
+    "snooze_notifications": "Snooze Notifications",
+    "watch_feed": "Watch Feed",
+    "comments_count": {
+      "count-0": "0 comments",
+      "count-1": "1 comment",
+      "count-2": "{count} comments"
+    },
+    "you_and_other_likes_count": {
+      "count-0": "You liked this",
+      "count-1": "You and 1 more liked this",
+      "count-2": "You and {count} more liked this"
+    },
+    "other_likes_count": {
+      "count-0": "0 people liked this",
+      "count-1": "1 person liked this",
+      "count-2": "{count} people liked this"
+    }
+  },
+  "feed_comments": {
+    "create_hint": "Write a comment..."
+  },
+  "select_event_code": {
+    "event_url": "Event URL",
+    "hint_subtitle": "This is the address you use to sign in to Event Meet",
+    "your_event-code": "event-subdomain",
+    "error_event_not_found": "This event doesn't exist, please try again."
+  }
+}

@@ -1,0 +1,67 @@
+update_fastlane
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Build IPA"
+  lane :build do |options|
+    dartEnv = options[:dartEnv]
+    commonConfig = read_xcconfig(path: "./Flutter/Common.xcconfig")
+    envConfig = read_xcconfig(path: "../config/#{dartEnv}.config")
+    appNameForFile = "EventMeet-#{envConfig['EVENT_CODE'] ? envConfig['EVENT_CODE'] : 'General'}"
+    if dartEnv == 'production'
+      buildNumber = latest_testflight_build_number(
+          app_identifier: commonConfig['APPLICATION_ID'],
+          api_key_path: 'fastlane/appstore_api_key.json',
+      )
+      newBuildNumber = buildNumber + 1
+
+      exportOptions = File.read('../export_options.plist')
+      exportOptions.gsub! '$(IOS_APPLICATION_ID)', commonConfig['APPLICATION_ID'];
+      File.write('../export_options.g.plist',exportOptions);
+
+      sh("cd ../.. && flutter build ipa --export-options-plist=ios/export_options.g.plist --obfuscate --split-debug-info=build/ios_split_debug_info --build-number=#{newBuildNumber}")
+      sh('cd ../../ && ipaFile=$(ls -1 build/ios/ipa/*.ipa | grep -m1 "") && mv "$ipaFile" build/' + appNameForFile + '.ipa')
+    end
+  end
+
+  after_each do |lane, options|
+    if lane == :build
+        File.delete('../export_options.g.plist');
+    end
+  end
+
+  desc "Deploy IPA to Testflight"
+  lane :deploy do |options|
+    dartEnv = options[:dartEnv]
+    commonConfig = read_xcconfig(path: "./Flutter/Common.xcconfig")
+    envConfig = read_xcconfig(path: "../config/#{dartEnv}.config")
+    appNameForFile = "EventMeet-#{envConfig['EVENT_CODE'] ? envConfig['EVENT_CODE'] : 'General'}"
+
+    if dartEnv == 'production'
+      upload_to_testflight(
+          api_key_path: 'fastlane/appstore_api_key.json',
+          skip_waiting_for_build_processing: true,
+          apple_id: commonConfig['APPLE_STORE_ID'],
+          ipa: "../build/#{appNameForFile}.ipa",
+          )
+    end
+  end
+
+
+  desc "Generate Certificates and Profiles"
+  lane :app_match do |options|
+    dartEnv = options[:dartEnv]
+    commonConfig = read_xcconfig(path: "./Flutter/Common.xcconfig")
+    envConfig = read_xcconfig(path: "../config/#{dartEnv}.config")
+    match(
+        storage_mode: 'git',
+        git_url: 'git@github.com:wipeguy82/conferenceapp.git',
+        type: options[:type],
+        git_branch: 'certificates',
+        app_identifier: commonConfig['APPLICATION_ID'],
+        api_key_path: 'fastlane/appstore_api_key.json',
+        )
+  end
+
+end

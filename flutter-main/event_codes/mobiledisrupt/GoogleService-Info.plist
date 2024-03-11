@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>156501342149-64cr6dllfj25n42flvgfc5r1l5vq2hqt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.156501342149-64cr6dllfj25n42flvgfc5r1l5vq2hqt</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>156501342149-4v8f462ddqa6bq42id778u4j122qfe5d.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB6QnrgObZZmX_gPE1oK-_nCKzOj6ZAcTk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>156501342149</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.eventmeet.mobiledisrupt2023</string>
+	<key>PROJECT_ID</key>
+	<string>boxwood-airport-193606</string>
+	<key>STORAGE_BUCKET</key>
+	<string>boxwood-airport-193606.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:156501342149:ios:762e4f83c6834c4ba6fdac</string>
+	<key>DATABASE_URL</key>
+	<string>https://boxwood-airport-193606.firebaseio.com</string>
+</dict>
+</plist>

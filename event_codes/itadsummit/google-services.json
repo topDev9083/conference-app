@@ -1,0 +1,220 @@
+{
+  "project_info": {
+    "project_number": "156501342149",
+    "firebase_url": "https://boxwood-airport-193606.firebaseio.com",
+    "project_id": "boxwood-airport-193606",
+    "storage_bucket": "boxwood-airport-193606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:6814489327bf168aa6fdac",
+        "android_client_info": {
+          "package_name": "com.eventmeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-4v8f462ddqa6bq42id778u4j122qfe5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eventmeet",
+            "certificate_hash": "f1a4a97e0879411da0b5466730115f83070a4b60"
+          }
+        },
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "156501342149-4m12lu2hi4uq9ntiv0gqqgjrh11cbhjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.eventmeet.itadsummit",
+                "app_store_id": "1628975436"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:93e80af8d246f754a6fdac",
+        "android_client_info": {
+          "package_name": "com.eventmeet.mobiledisrupt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-rl393e42driegfurfhgsud0qdhond8s5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eventmeet.mobiledisrupt",
+            "certificate_hash": "ff89a57e5c9d558c5d3c1edc5a08aa89a6f1d389"
+          }
+        },
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "156501342149-4m12lu2hi4uq9ntiv0gqqgjrh11cbhjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.eventmeet.itadsummit",
+                "app_store_id": "1628975436"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:23eb0fd9c6034293a6fdac",
+        "android_client_info": {
+          "package_name": "io.eventmeet.itadsummit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-kpgehrfo21f4ob6rjhptdjlm96e8ts1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.eventmeet.itadsummit",
+            "certificate_hash": "62576b094aeb0d594f0e003a1bd2189b8b0060b8"
+          }
+        },
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "156501342149-4m12lu2hi4uq9ntiv0gqqgjrh11cbhjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.eventmeet.itadsummit",
+                "app_store_id": "1628975436"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:d09656a1ffd247afa6fdac",
+        "android_client_info": {
+          "package_name": "io.eventmeet.itadsummit2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "156501342149-4m12lu2hi4uq9ntiv0gqqgjrh11cbhjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.eventmeet.itadsummit",
+                "app_store_id": "1628975436"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:7e254a2b04e7a16ca6fdac",
+        "android_client_info": {
+          "package_name": "io.eventmeet.mobiledisrupt2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "156501342149-4m12lu2hi4uq9ntiv0gqqgjrh11cbhjq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.eventmeet.itadsummit",
+                "app_store_id": "1628975436"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

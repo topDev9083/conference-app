@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "156501342149",
+    "firebase_url": "https://boxwood-airport-193606.firebaseio.com",
+    "project_id": "boxwood-airport-193606",
+    "storage_bucket": "boxwood-airport-193606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156501342149:android:6814489327bf168aa6fdac",
+        "android_client_info": {
+          "package_name": "com.eventmeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156501342149-4v8f462ddqa6bq42id778u4j122qfe5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eventmeet",
+            "certificate_hash": "f1a4a97e0879411da0b5466730115f83070a4b60"
+          }
+        },
+        {
+          "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLZ1EZVQ6GGx5B7BBDaGCG-H8-aMx9xEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156501342149-d65gqt4ornjbhik1l4aaffecvj0e524k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
