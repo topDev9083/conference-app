@@ -1,6 +1,5 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
-
 import '../../../../models/data/exhibitor_data.dart';
 import '../../../../models/states/api_state.dart';
 

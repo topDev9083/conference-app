@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../../flutter_i18n/translation_keys.dart';
 import '../../../widgets/fragment_padding.dart';
 import 'bloc/exhibitors_bloc.dart';
